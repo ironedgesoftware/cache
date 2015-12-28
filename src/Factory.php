@@ -75,7 +75,7 @@ class Factory
 
 
     /**
-     * Method create.
+     * Creates an instance of a doctrine cache provider and assigns it an ID.
      *
      * @param string               $id             - Instance ID.
      * @param string|CacheProvider $typeOrInstance - Instance type.
