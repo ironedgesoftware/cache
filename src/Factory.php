@@ -362,4 +362,14 @@ class Factory
 
         return $this->_instances[$id];
     }
+
+    /**
+     * Returns an array of cache instances.
+     *
+     * @return array
+     */
+    public function getInstances()
+    {
+        return $this->_instances;
+    }
 }
