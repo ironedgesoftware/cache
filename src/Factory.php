@@ -80,6 +80,7 @@ class Factory
      * @param string               $id             - Instance ID.
      * @param string|CacheProvider $typeOrInstance - Instance type.
      * @param array                $config         - Instance config.
+     * @param bool                 $refresh        - Re-create the instance even if it's already created.
      *
      * @throws InvalidTypeException
      * @throws InvalidConfigException
@@ -87,7 +88,7 @@ class Factory
      *
      * @return CacheProvider
      */
-    public function create($id, $typeOrInstance, array $config = [])
+    public function create($id, $typeOrInstance, array $config = [], $refresh = false)
     {
         if (!is_string($id)) {
             throw new \InvalidArgumentException('Argument $id must be a string.');
@@ -99,7 +100,7 @@ class Factory
             );
         }
 
-        if (!isset($this->_instances[$id])) {
+        if (!isset($this->_instances[$id]) || $refresh) {
             if (is_object($typeOrInstance)) {
                 $this->_instances[$id] = $typeOrInstance;
             } else {
