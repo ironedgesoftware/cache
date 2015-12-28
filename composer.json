@@ -1,0 +1,39 @@
+{
+    "name": "ironedge/cache",
+    "description": "Cache component which serves as a factory of doctrine cache component classes.",
+    "keywords": ["cache", "frenzy", "framework"],
+    "homepage": "http://www.ironedgesoftware.com",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustavo Falco",
+            "email": "comfortablynumb84@gmail.com",
+            "homepage": "http://www.ironedgesoftware.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ironedgesoftware/cache/issues"
+    },
+    "require": {
+        "php": "^5.6.0 || ^7.0",
+
+        "doctrine/cache": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.5 || ^5.0.5",
+        "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IronEdge\\Component\\Cache\\": "src",
+            "IronEdge\\Component\\Cache\\Test\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
