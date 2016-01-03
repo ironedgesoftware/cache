@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the kernel package.
+ * This file is part of the cache package.
  *
  * (c) Gustavo Falco <comfortablynumb84@gmail.com>
  *
